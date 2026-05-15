@@ -1,3 +1,12 @@
 export default function MessageBubble({ role, text }) {
-  return <p className={`message ${role}`}>{text}</p>;
+  const avatar = role === 'assistant' ? '🥄' : '👩';
+
+  return (
+    <div className={`message-row ${role}`}>
+      <span className="message-avatar" aria-hidden="true">
+        {avatar}
+      </span>
+      <p className={`message ${role}`}>{text}</p>
+    </div>
+  );
 }

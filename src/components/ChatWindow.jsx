@@ -25,23 +25,29 @@ export default function ChatWindow({
         ))}
       </div>
 
-      <form className="chat-form" onSubmit={onSubmit}>
-        <input
-          type="text"
-          value={input}
-          onChange={(event) => onInputChange(event.target.value)}
-          placeholder="כתבי משהו כמו: יש לי עוף ותפוחי אדמה..."
-          disabled={isLoading}
-        />
-        <button type="submit" aria-label="שליחה" disabled={isLoading}>
-          {isLoading ? 'רגע...' : 'שליחה'}
-        </button>
-      </form>
+      <div className="composer-shell">
+        <form className="chat-form" onSubmit={onSubmit}>
+          <input
+            type="text"
+            value={input}
+            onChange={(event) => onInputChange(event.target.value)}
+            placeholder="כתבי הודעה..."
+            disabled={isLoading}
+          />
+          <button type="submit" aria-label="שליחה" disabled={isLoading}>
+            {isLoading ? '...' : 'שליחה'}
+          </button>
+        </form>
 
-      <div className="chat-actions">
-        <button type="button" onClick={onFinishConversation} disabled={isConversationComplete || isLoading}>
-          {isConversationComplete ? 'השיחה הסתיימה' : 'סיימתי, הכיני לי סיכום'}
-        </button>
+        <div className="chat-actions">
+          <button
+            type="button"
+            onClick={onFinishConversation}
+            disabled={isConversationComplete || isLoading}
+          >
+            {isConversationComplete ? 'השיחה הסתיימה' : 'סיימתי, הכיני לי סיכום'}
+          </button>
+        </div>
       </div>
     </section>
   );
