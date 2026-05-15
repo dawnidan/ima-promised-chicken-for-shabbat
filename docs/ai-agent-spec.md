@@ -21,4 +21,4 @@ The assistant helps Hebrew-speaking users plan Shabbat meals, organize messy rec
 
 ## Current MVP limitation
 
-All responses are mocked locally. No model calls or persistence are implemented yet.
+The app now includes the first backend integration layer, but the production recipe corpus still needs to be uploaded and connected through a vector store before the assistant can answer from the user's real recipes.

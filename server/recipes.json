@@ -1,0 +1,34 @@
+{
+  "recipes": [
+    {
+      "id": "vegetable-soup",
+      "name": "מרק ירקות",
+      "emoji": "🍲",
+      "url": "#vegetable-soup",
+      "keywords": ["מרק", "ירקות", "קליל"]
+    },
+    {
+      "id": "shabbat-chicken",
+      "name": "עוף לשבת",
+      "emoji": "🍗",
+      "url": "#shabbat-chicken",
+      "keywords": ["עוף", "קלאסי", "שבת"]
+    },
+    {
+      "id": "potatoes",
+      "name": "תפוחי אדמה בתנור",
+      "emoji": "🥔",
+      "url": "#potatoes",
+      "keywords": ["תפוחי אדמה", "תוספת", "קלאסי"]
+    }
+  ],
+  "shoppingList": [
+    "עוף שלם",
+    "6 תפוחי אדמה",
+    "3 בצלים",
+    "2 גזרים",
+    "חבילת כוסברה",
+    "1 חלה",
+    "יין לקידוש"
+  ]
+}

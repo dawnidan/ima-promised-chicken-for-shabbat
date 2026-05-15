@@ -7,6 +7,7 @@ export default function ChatWindow({
   onSubmit,
   onFinishConversation,
   isConversationComplete,
+  isLoading,
 }) {
   return (
     <section className="chat-card" aria-label="צ'אט">
@@ -27,14 +28,15 @@ export default function ChatWindow({
           value={input}
           onChange={(event) => onInputChange(event.target.value)}
           placeholder="כתבי משהו כמו: יש לי עוף ותפוחי אדמה..."
+          disabled={isLoading}
         />
-        <button type="submit" aria-label="שליחה">
-          שליחה
+        <button type="submit" aria-label="שליחה" disabled={isLoading}>
+          {isLoading ? 'רגע...' : 'שליחה'}
         </button>
       </form>
 
       <div className="chat-actions">
-        <button type="button" onClick={onFinishConversation} disabled={isConversationComplete}>
+        <button type="button" onClick={onFinishConversation} disabled={isConversationComplete || isLoading}>
           {isConversationComplete ? 'השיחה הסתיימה' : 'סיימתי, הכיני לי סיכום'}
         </button>
       </div>

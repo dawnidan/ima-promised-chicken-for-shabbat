@@ -39,7 +39,7 @@ export default function WhatsAppCopyBox({ shoppingList, menu }) {
         </ul>
       </div>
 
-      <pre>{message}</pre>
+      <pre>{message || 'רשימת הקניות תופיע כאן אחרי חיבור המאגר האמיתי.'}</pre>
     </section>
   );
 }
