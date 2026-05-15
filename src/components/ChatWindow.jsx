@@ -1,6 +1,13 @@
 import MessageBubble from './MessageBubble.jsx';
 
-export default function ChatWindow({ messages, input, onInputChange, onSubmit }) {
+export default function ChatWindow({
+  messages,
+  input,
+  onInputChange,
+  onSubmit,
+  onFinishConversation,
+  isConversationComplete,
+}) {
   return (
     <section className="chat-card" aria-label="צ'אט">
       <div className="chat-header">
@@ -25,6 +32,12 @@ export default function ChatWindow({ messages, input, onInputChange, onSubmit })
           שליחה
         </button>
       </form>
+
+      <div className="chat-actions">
+        <button type="button" onClick={onFinishConversation} disabled={isConversationComplete}>
+          {isConversationComplete ? 'השיחה הסתיימה' : 'סיימתי, הכיני לי סיכום'}
+        </button>
+      </div>
     </section>
   );
 }

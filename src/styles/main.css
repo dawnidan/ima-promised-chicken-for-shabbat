@@ -94,34 +94,11 @@ h1 {
   font-size: 16px;
 }
 
-.helper-line {
-  margin-top: 8px;
-  color: #7b5c46;
-  line-height: 1.55;
-  font-size: 14px;
-}
-
-.quick-prompts {
-  display: grid;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.quick-prompts button,
 .chat-form button,
+.chat-actions button,
 .shopping-header button {
   border: 0;
   cursor: pointer;
-}
-
-.quick-prompts button {
-  min-height: 58px;
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: #fff8ef;
-  color: #443126;
-  text-align: right;
-  box-shadow: 0 10px 22px rgba(112, 72, 39, 0.08);
 }
 
 .chat-card,
@@ -199,12 +176,27 @@ h1 {
 }
 
 .chat-form button,
+.chat-actions button,
 .shopping-header button {
   border-radius: 16px;
   padding: 12px 16px;
   background: #8d5b3d;
   color: #fff8ef;
   box-shadow: 0 8px 16px rgba(112, 72, 39, 0.12);
+}
+
+.chat-actions {
+  display: flex;
+  padding: 0 14px 14px;
+}
+
+.chat-actions button {
+  width: 100%;
+}
+
+.chat-actions button:disabled {
+  cursor: default;
+  opacity: 0.72;
 }
 
 .shopping-card {
@@ -232,6 +224,36 @@ h1 {
   align-self: flex-start;
 }
 
+.menu-section {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff8ef;
+}
+
+.menu-section h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.menu-section ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-section li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-section a {
+  color: #6f412c;
+}
+
 pre {
   margin: 16px 0 0;
   padding: 16px;
@@ -250,14 +272,6 @@ pre {
 
   h1 {
     font-size: 34px;
-  }
-
-  .quick-prompts {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .quick-prompts button {
-    min-height: 76px;
   }
 
   .shopping-header {

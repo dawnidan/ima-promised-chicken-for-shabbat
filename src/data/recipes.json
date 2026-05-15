@@ -16,6 +16,26 @@
       "emoji": "🥔"
     }
   ],
+  "shabbatMenu": [
+    {
+      "id": "vegetable-soup",
+      "name": "מרק ירקות",
+      "emoji": "🍲",
+      "url": "#vegetable-soup"
+    },
+    {
+      "id": "shabbat-chicken",
+      "name": "עוף לשבת",
+      "emoji": "🍗",
+      "url": "#shabbat-chicken"
+    },
+    {
+      "id": "potatoes",
+      "name": "תפוחי אדמה בתנור",
+      "emoji": "🥔",
+      "url": "#potatoes"
+    }
+  ],
   "shoppingList": [
     "עוף שלם",
     "6 תפוחי אדמה",

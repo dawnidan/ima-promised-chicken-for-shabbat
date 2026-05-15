@@ -18,9 +18,6 @@ export default function RecipeNotebookHeader() {
       <p className="description">
         מחברת מתכונים חכמה שמונעת משברי רעב, שאלות מיותרות, וקריאות מצוקה לחסדי נעמי.
       </p>
-      <p className="helper-line">
-        בונה תפריט, מסדרת מתכונים ומכינה רשימת קניות להעתקה לוואטסאפ.
-      </p>
     </section>
   );
 }
