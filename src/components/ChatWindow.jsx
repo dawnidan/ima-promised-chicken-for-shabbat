@@ -12,8 +12,11 @@ export default function ChatWindow({
   return (
     <section className="chat-card" aria-label="צ'אט">
       <div className="chat-header">
-        <span>העוזרת של שבת</span>
-        <small>זמינה גם כשאין כוח לחשוב</small>
+        <div>
+          <span>העוזרת של שבת</span>
+          <small>זמינה גם כשאין כוח לחשוב</small>
+        </div>
+        <em>●</em>
       </div>
 
       <div className="chat-window">
