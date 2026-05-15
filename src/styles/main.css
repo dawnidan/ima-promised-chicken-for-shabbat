@@ -71,15 +71,6 @@ button:hover {
   box-shadow: 0 8px 16px rgba(112, 72, 39, 0.1);
 }
 
-.hero-illustration {
-  display: block;
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto 14px;
-  border-radius: 18px;
-  box-shadow: 0 12px 26px rgba(112, 72, 39, 0.1);
-}
-
 h1,
 h2,
 p {
