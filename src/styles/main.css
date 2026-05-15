@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
+
 :root {
   font-family:
-    Arial, 'Noto Sans Hebrew', 'Rubik', system-ui, sans-serif;
+    'Assistant', Arial, 'Noto Sans Hebrew', system-ui, sans-serif;
   color: #443126;
   background: #f7ead8;
   font-synthesis: none;
