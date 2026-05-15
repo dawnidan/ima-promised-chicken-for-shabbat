@@ -52,3 +52,5 @@ For the two existing WhatsApp groups, the next ingestion step should be:
 3. Extract recipe-like messages and links.
 4. Normalize them into one canonical recipe format.
 5. Add the cleaned recipes into the vector store.
+
+The first parser is implemented in `server/importWhatsAppExports.js`.

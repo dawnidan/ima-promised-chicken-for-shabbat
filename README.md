@@ -66,3 +66,13 @@ npm run upload:recipes
 - או הודעת מתכון מלאה
 
 הבקשה תישמר ב־`server/recipeSubmissions.json` כפריט שממתין לבדיקה ועיבוד.
+
+## ייבוא משיחות WhatsApp
+
+אחרי שמייצאים שיחות WhatsApp לקובצי טקסט:
+
+```bash
+npm run import:whatsapp -- path/to/chat-1.txt path/to/chat-2.txt
+```
+
+המערכת תייצר קובץ מועמדים לייבוא ב־`server/whatsappImportedCandidates.json`.
