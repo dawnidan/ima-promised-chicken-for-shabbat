@@ -17,12 +17,19 @@ const followUpResponses = [
   'מעולה, נראה שיש לנו כיוון טוב. אפשר להוסיף עוד פרט אחד, או לסיים ולקבל תפריט מסודר.',
 ];
 
+const addRecipeTriggers = ['להוסיף מתכון', 'הוסיפי מתכון', 'מתכון חדש'];
+
+function isLikelyUrl(value) {
+  return /^https?:\/\//i.test(value);
+}
+
 export default function App() {
   const [messages, setMessages] = useState(initialMessages);
   const [input, setInput] = useState('');
   const [isConversationComplete, setIsConversationComplete] = useState(false);
   const [summary, setSummary] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAddingRecipe, setIsAddingRecipe] = useState(false);
 
   const addConversationTurn = (message, response) => {
     setMessages((current) => [
@@ -52,6 +59,26 @@ export default function App() {
     return response.json();
   };
 
+  const submitRecipe = async (content) => {
+    const apiBase = import.meta.env.VITE_API_BASE_URL ?? '';
+    const response = await fetch(`${apiBase}/api/recipe-submissions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type: isLikelyUrl(content) ? 'url' : 'message',
+        content,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Recipe submission failed');
+    }
+
+    return response.json();
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const trimmed = input.trim();
@@ -66,6 +93,28 @@ export default function App() {
     setIsLoading(true);
 
     try {
+      if (isAddingRecipe) {
+        const result = await submitRecipe(trimmed);
+        setMessages((current) => [
+          ...current,
+          { role: 'assistant', text: result.assistantMessage },
+        ]);
+        setIsAddingRecipe(false);
+        return;
+      }
+
+      if (addRecipeTriggers.some((trigger) => trimmed.includes(trigger))) {
+        setMessages((current) => [
+          ...current,
+          {
+            role: 'assistant',
+            text: 'בשמחה. הדביקי כאן קישור למתכון או את ההודעה המלאה, ואני אשמור אותו במאגר.',
+          },
+        ]);
+        setIsAddingRecipe(true);
+        return;
+      }
+
       const result = await requestAssistant(nextMessages);
       setMessages((current) => [...current, { role: 'assistant', text: result.assistantMessage }]);
     } catch {

@@ -33,3 +33,22 @@ npm run upload:recipes
 
 4. Copy the printed `OPENAI_VECTOR_STORE_ID` into `.env`.
 5. Replace placeholder recipe links with real recipe routes or canonical document links.
+
+## Recipe submission flow
+
+The backend exposes `POST /api/recipe-submissions` so the chat can accept either:
+
+- a recipe URL
+- a pasted recipe message
+
+Submissions are stored locally in `server/recipeSubmissions.json` with a `pending_review` status. This is the first step toward a fuller ingestion pipeline that will later normalize recipes, deduplicate them, and add them to the searchable corpus.
+
+## WhatsApp archive path
+
+For the two existing WhatsApp groups, the next ingestion step should be:
+
+1. Export both chats from WhatsApp.
+2. Parse the exported text/media bundle.
+3. Extract recipe-like messages and links.
+4. Normalize them into one canonical recipe format.
+5. Add the cleaned recipes into the vector store.

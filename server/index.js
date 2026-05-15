@@ -4,6 +4,7 @@ import express from 'express';
 import OpenAI from 'openai';
 import recipes from './recipes.json' with { type: 'json' };
 import { buildLocalSummary, searchLocalRecipes } from './localRecipeSearch.js';
+import { createRecipeSubmission, listRecipeSubmissions } from './recipeSubmissions.js';
 
 const app = express();
 const port = Number(process.env.PORT || 8787);
@@ -22,6 +23,33 @@ app.get('/api/health', (_request, response) => {
 
 app.get('/api/recipes', (_request, response) => {
   response.json({ recipes });
+});
+
+app.get('/api/recipe-submissions', (_request, response) => {
+  response.json({ submissions: listRecipeSubmissions() });
+});
+
+app.post('/api/recipe-submissions', (request, response) => {
+  const { type, content } = request.body ?? {};
+
+  if (!['url', 'message'].includes(type) || !content?.trim()) {
+    return response.status(400).json({
+      error: 'INVALID_RECIPE_SUBMISSION',
+    });
+  }
+
+  const submission = createRecipeSubmission({
+    type,
+    content: content.trim(),
+  });
+
+  response.status(201).json({
+    submission,
+    assistantMessage:
+      type === 'url'
+        ? 'קיבלתי את הקישור. אשמור אותו כמתכון חדש לבדיקה וסידור.'
+        : 'קיבלתי את המתכון. אשמור אותו לבדיקה ואסדר אותו לרכיבים ושלבים.',
+  });
 });
 
 app.post('/api/chat', async (request, response) => {

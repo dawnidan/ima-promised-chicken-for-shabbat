@@ -16,6 +16,7 @@ Create a warm, mobile-first homepage that helps a user start a Shabbat-planning 
 
 - Real AI responses
 - Recipe ingestion and cleanup
+- WhatsApp archive import
 - Saved recipe collection
 - Generated shopping lists from selected recipes
 - Family preference memory
