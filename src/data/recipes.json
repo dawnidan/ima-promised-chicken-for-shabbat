@@ -1,0 +1,28 @@
+{
+  "featuredRecipes": [
+    {
+      "id": "shabbat-chicken",
+      "name": "עוף לשבת",
+      "emoji": "🍗"
+    },
+    {
+      "id": "vegetable-soup",
+      "name": "מרק ירקות",
+      "emoji": "🍲"
+    },
+    {
+      "id": "potatoes",
+      "name": "תפוחי אדמה בתנור",
+      "emoji": "🥔"
+    }
+  ],
+  "shoppingList": [
+    "עוף שלם",
+    "6 תפוחי אדמה",
+    "3 בצלים",
+    "2 גזרים",
+    "חבילת כוסברה",
+    "1 חלה",
+    "יין לקידוש"
+  ]
+}

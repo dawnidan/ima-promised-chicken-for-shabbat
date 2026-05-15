@@ -1,0 +1,268 @@
+:root {
+  font-family:
+    Arial, 'Noto Sans Hebrew', 'Rubik', system-ui, sans-serif;
+  color: #443126;
+  background: #f7ead8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f7ead8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.92), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(225, 198, 164, 0.24), transparent 24%),
+    linear-gradient(180deg, #fbf1e4 0%, #f7ead8 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.app-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 18px 16px 28px;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.hero-badges span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 249, 241, 0.95);
+  box-shadow: 0 8px 16px rgba(112, 72, 39, 0.1);
+}
+
+.hero-illustration {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(112, 72, 39, 0.12);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.description {
+  margin-top: 12px;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.helper-line {
+  margin-top: 8px;
+  color: #7b5c46;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.quick-prompts {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.quick-prompts button,
+.chat-form button,
+.shopping-header button {
+  border: 0;
+  cursor: pointer;
+}
+
+.quick-prompts button {
+  min-height: 58px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #fff8ef;
+  color: #443126;
+  text-align: right;
+  box-shadow: 0 10px 22px rgba(112, 72, 39, 0.08);
+}
+
+.chat-card,
+.shopping-card {
+  margin-top: 18px;
+  border-radius: 20px;
+  background: rgba(255, 250, 243, 0.96);
+  box-shadow: 0 14px 30px rgba(112, 72, 39, 0.1);
+}
+
+.chat-card {
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: #ead2b5;
+}
+
+.chat-header span {
+  font-weight: 700;
+}
+
+.chat-header small {
+  color: #72523d;
+}
+
+.chat-window {
+  display: grid;
+  gap: 10px;
+  min-height: 250px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.message {
+  width: fit-content;
+  max-width: 88%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  line-height: 1.55;
+}
+
+.message.assistant {
+  justify-self: start;
+  border-bottom-right-radius: 6px;
+  background: #f1dfc8;
+}
+
+.message.user {
+  justify-self: end;
+  border-bottom-left-radius: 6px;
+  background: #dce8cf;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid rgba(91, 64, 43, 0.1);
+}
+
+.chat-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d8bea0;
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: #fffdf9;
+  color: #443126;
+}
+
+.chat-form button,
+.shopping-header button {
+  border-radius: 16px;
+  padding: 12px 16px;
+  background: #8d5b3d;
+  color: #fff8ef;
+  box-shadow: 0 8px 16px rgba(112, 72, 39, 0.12);
+}
+
+.shopping-card {
+  padding: 16px;
+}
+
+.shopping-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shopping-header h2 {
+  font-size: 20px;
+}
+
+.shopping-header p {
+  margin-top: 5px;
+  color: #7b5c46;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.shopping-header button {
+  align-self: flex-start;
+}
+
+pre {
+  margin: 16px 0 0;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff8ef;
+  color: #443126;
+  font: inherit;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 640px) {
+  .app-shell {
+    padding: 32px 24px 36px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .quick-prompts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quick-prompts button {
+    min-height: 76px;
+  }
+
+  .shopping-header {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
