@@ -1,2 +1,26 @@
-# CookBook
-אפשר כך — **342 תווים**:  **A digital recipe notebook that collects and organizes recipes from exported WhatsApp chats, including texts, links, images, screenshots, and handwritten notes. The project will later use the recipe database to build an AI menu planner for Shabbat, holidays, and family meals based on guests and food preferences.**
+# CookBook# אמא, הבטחת לנו עוף לשבת 🍗
+
+מחברת מתכונים חכמה שמונעת משברי רעב, שאלות מיותרות, וקריאות מצוקה לחסדי נעמי.
+
+האתר מבוסס על צ׳אט עם סוכן בינה מלאכותית שעוזר לבנות תפריט לשבת, להוסיף מתכונים למאגר, לסדר מתכונים מבולגנים, וליצור רשימת קניות עם אימוג׳ים שמוכנה להעתקה ל־WhatsApp.
+
+## מה יהיה באתר?
+
+- צ׳אט מרכזי עם עוזרת AI
+- בניית תפריט לשבת
+- הוספת מתכונים למאגר
+- סידור מתכונים מבולגנים
+- יצירת רשימת קניות עם אימוג׳ים
+- טקסטים מוכנים להעתקה ל־WhatsApp
+
+## הודעות פתיחה מהירות
+
+באתר יופיעו שלושה כפתורים קבועים:
+
+1. עזור לי לבנות תפריט לשבת
+2. אני רוצה להוסיף מתכון למאגר
+3. איך להשתמש בך?
+
+## עיצוב
+
+העיצוב יתבסס על סגנון מתכון 1: מחברת מתכונים ביתית, חמימה, מאוירת ונעימה.
